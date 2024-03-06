@@ -17,12 +17,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         googleSignIn()
         
     }
    
     func googleSignIn(){
+        
         DispatchQueue.main.async {
             GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
                 if error != nil || user == nil {
